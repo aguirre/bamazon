@@ -8,3 +8,13 @@ var connection = mysql.createConnection({
   password: "password",
   database: "bamazon"
 });
+
+beginTransaction();
+
+function beginTransaction() {
+  connection.query("SELECT * FROM products", function(err, result) {
+    if (err) console.log(err);
+    result.forEach(printItem, this);
+    getInput(result.length);
+  });
+}
