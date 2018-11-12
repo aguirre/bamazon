@@ -143,6 +143,80 @@ var addInv = () => {
     });
 };
 
+var newItem = () => {
+  inquirer
+    .prompt([
+      {
+        name: "name",
+        type: "input",
+        message: "Name: ",
+        validate: function(value) {
+          if (value) {
+            return true;
+          } else {
+            return `${value} is not a valid name`;
+          }
+        }
+      },
+      {
+        name: "department",
+        type: "list",
+        message: "Department: ",
+        choices: [
+          "sports",
+          "music",
+          "electronics",
+          "home",
+          "kitchen",
+          "pets",
+          "food",
+          "clothing"
+        ]
+      },
+      {
+        name: "price",
+        type: "input",
+        message: "Price: ",
+        validate: function(value) {
+          if (Number.isNaN(parseInt(value)) === false && value > 0) {
+            return true;
+          } else {
+            return `${value} is not a valid price`;
+          }
+        }
+      },
+      {
+        name: "stock",
+        type: "input",
+        message: "Stock Quantity: ",
+        validate: function(value) {
+          if (Number.isNaN(parseInt(value)) === false && value > 0) {
+            return true;
+          } else {
+            return `${value} is not a valid stock number`;
+          }
+        }
+      }
+    ])
+    .then(function(answers) {
+      console.log(
+        `\n\nNEW PRODUCT:\n     Name: ${answers.name}\n     Dept: ${
+          answers.department
+        }\n     Price: ${answers.price}\n     Stock: ${answers.stock}\n\n`
+      );
+
+      connection.query(
+        `INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ('${
+          answers.name
+        }', '${answers.department}', ${answers.price}, ${answers.stock})`,
+        function(err, res) {
+          if (err) throw err;
+          runManager();
+        }
+      );
+    });
+};
+
 connection.connect(function(err) {
   if (err) throw err;
   runManager();
