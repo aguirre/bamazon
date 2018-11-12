@@ -51,11 +51,28 @@ var runManager = () => {
 
 var viewSales = () => {
   connection.query(
-    `SELECT item_id, product_name, price, stock_quantity FROM products`,
+    "SELECT item_id, product_name, price, stock_quantity FROM products",
     function(err, res) {
       if (err) throw err;
       console.log(
-        `\n------------------------- BAMAZON PRODUCTS --------------------------\n`
+        "\n------------------------- BAMAZON PRODUCTS --------------------------\n"
+      );
+      console.table(res);
+      console.log(
+        "\n---------------------------------------------------------------------\n"
+      );
+      runManager();
+    }
+  );
+};
+
+var viewLow = () => {
+  connection.query(
+    "SELECT item_id, product_name, stock_quantity FROM products WHERE stock_quantity<5",
+    function(err, res) {
+      if (err) throw err;
+      console.log(
+        "\n----------------------- BAMAZON LOW INVENTORY -----------------------\n"
       );
       console.table(res);
       console.log(
