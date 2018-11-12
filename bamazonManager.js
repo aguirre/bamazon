@@ -12,10 +12,10 @@ var connection = mysql.createConnection({
 });
 
 // Global Variables
-let currentProducts = [];
+var currentProducts = [];
 
 // Bamazon Manager View
-let runManager = () => {
+var runManager = () => {
   inquirer
     .prompt({
       name: "action",
@@ -47,6 +47,23 @@ let runManager = () => {
           break;
       }
     });
+};
+
+var viewSales = () => {
+  connection.query(
+    `SELECT item_id, product_name, price, stock_quantity FROM products`,
+    function(err, res) {
+      if (err) throw err;
+      console.log(
+        `\n------------------------- BAMAZON PRODUCTS --------------------------\n`
+      );
+      console.table(res);
+      console.log(
+        "\n---------------------------------------------------------------------\n"
+      );
+      runManager();
+    }
+  );
 };
 
 connection.connect(function(err) {
