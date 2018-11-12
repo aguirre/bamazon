@@ -16,11 +16,11 @@ var currentProducts = [];
 // Bamazon Customer View
 var productInfo = () => {
   connection.query(
-    `SELECT item_id, product_name, price FROM products`,
+    "SELECT item_id, product_name, price FROM products",
     function(err, res) {
       if (err) throw err;
       console.log(
-        `\n------------------------- BAMAZON PRODUCTS --------------------------\n`
+        "\n------------------------- BAMAZON PRODUCTS --------------------------\n"
       );
       console.table(res);
       console.log(
@@ -32,7 +32,7 @@ var productInfo = () => {
 };
 
 var createArray = () => {
-  connection.query(`SELECT product_name FROM products`, function(err, res) {
+  connection.query("SELECT product_name FROM products", function(err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
       currentProducts.push(res[i].product_name);
