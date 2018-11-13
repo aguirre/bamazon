@@ -6,7 +6,7 @@
 node bamazonCustomer.js
 ```
 
-#### Running this application will first display all of the items available for sale in your terminal.
+#### Running this application will first display all of the items available for sale.
 
 ### Example of Bamazon Customer Menu:
 
