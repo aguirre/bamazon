@@ -43,19 +43,19 @@ node bamazonManager.js
 
 <img src="images/forsale.png" alt="View Products for Sale">
 
-#### If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+#### If a manager selects `View Low Inventory`, then it will list all items with an inventory count lower than five.
 
 ### Example of View Low Inventory:
 
 <img src="images/lowinv.png" alt="View Low Inventory">
 
-#### If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+#### If a manager selects `Add to Inventory`, your app will display a prompt that will let the manager "add more" of any item currently in the store.
 
 ### Example of Add to Inventory:
 
 <img src="images/addinv.png" alt="Add to Inventory">
 
-#### If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+#### If a manager selects `Add New Product`, it will allow the manager to add a completely new product to the store.
 
 ### Example of Add New Product:
 
