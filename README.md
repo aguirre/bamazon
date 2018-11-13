@@ -41,4 +41,10 @@ node bamazonManager.js
 
 ### Example of View Products for Sale:
 
-<img src="images/forsale.png" alt="Manager Menu">
+<img src="images/forsale.png" alt="View Products for Sale">
+
+#### If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+
+### Example of View Low Inventory:
+
+<img src="images/inventory.png" alt="View Low Inventory">
