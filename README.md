@@ -6,4 +6,8 @@
 node bamazonCustomer.js
 ```
 
-### This will show Bamazon Node Market customer menu in your terminal.
+This will show Bamazon Customer Menu in your terminal.
+
+### Example of Bamazon Customer Menu:
+
+<img src="images/customer.png" alt="Customer Menu">
