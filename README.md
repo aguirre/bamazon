@@ -32,3 +32,7 @@ node bamazonManager.js
 - View Low Inventory
 - Add to Inventory
 - Add New Product
+
+### Example of Bamazon Manager Menu:
+
+<img src="images/manager.png" alt="Manager Menu">
