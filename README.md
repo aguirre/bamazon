@@ -49,7 +49,7 @@ node bamazonManager.js
 
 <img src="images/lowinv.png" alt="View Low Inventory">
 
-#### If a manager selects `Add to Inventory`, your app will display a prompt that will let the manager "add more" of any item currently in the store.
+#### If a manager selects `Add to Inventory`, the app will display a prompt that will let the manager "add more" of any item currently in the store.
 
 ### Example of Add to Inventory:
 
