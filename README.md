@@ -6,7 +6,7 @@
 node bamazonCustomer.js
 ```
 
-- Running this application will first display all of the items available for sale in your terminal.
+#### Running this application will first display all of the items available for sale in your terminal.
 
 ### Example of Bamazon Customer Menu:
 
@@ -19,3 +19,16 @@ node bamazonCustomer.js
 <img src="images/purchase.png" alt="Purchase Menu">
 
 - Once the customer has placed the order, customer will be given the total cost of their purchase.
+
+## Bamazon Manager Menu
+
+```
+node bamazonManager.js
+```
+
+#### Running this application will list a set of menu options:
+
+- View Products for Sale
+- View Low Inventory
+- Add to Inventory
+- Add New Product
