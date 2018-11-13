@@ -54,3 +54,9 @@ node bamazonManager.js
 ### Example of Add to Inventory:
 
 <img src="images/addinv.png" alt="Add to Inventory">
+
+#### If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+
+### Example of Add New Product:
+
+<img src="images/newitem.png" alt="Add New Product">
