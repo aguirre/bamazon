@@ -36,3 +36,9 @@ node bamazonManager.js
 ### Example of Bamazon Manager Menu:
 
 <img src="images/manager.png" alt="Manager Menu">
+
+#### If a manager selects `View Products for Sale`, the app will list every available item.
+
+### Example of View Products for Sale:
+
+<img src="images/forsale.png" alt="Manager Menu">
